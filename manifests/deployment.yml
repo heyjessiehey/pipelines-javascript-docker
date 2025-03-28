@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: heyjessieheypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: heyjessieheypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: heyjessieheypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: heyjessieheypipelinesjavascriptdocker 
+          image: jessiecontainerregistry2025.azurecr.io/heyjessieheypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
